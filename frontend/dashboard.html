@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - AI Demand Assistant</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="fade-in">Choose a Product Category</h1>
+    <div class="dashboard fade-in delay-1">
+      <!-- Each card leads to category.html -->
+      <a href="pages/category.html?category=mobiles" class="card">📱 Mobiles</a>
+      <a href="pages/category.html?category=groceries" class="card">🥖 Groceries</a>
+      <a href="pages/category.html?category=vegetables" class="card">🥕 Vegetables</a>
+      <a href="pages/category.html?category=fruits" class="card">🍎 Fruits</a>
+      <a href="pages/category.html?category=electronics" class="card">📺 Electronics</a>
+      <a href="pages/category.html?category=fashion" class="card">👕 Fashion</a>
+      <a href="pages/category.html?category=accessories" class="card">💍 Accessories</a>
+      <a href="pages/category.html?category=beauty" class="card">💄 Beauty</a>
+    </div>
+  </div>
+  <!-- Assistant Toggle Button -->
+<button id="toggle-assistant">🧠 AI Assistant</button>
+
+<!-- Assistant Chat Box -->
+<div id="assistant-box" class="assistant-box">
+  <div id="chat-box" class="chat-box"></div>
+  <div class="input-area">
+    <input type="text" id="assistant-input" placeholder="Ask me anything...">
+    <button id="send-btn">➤</button>
+  </div>
+</div>
+
+<script src="../js/assistant.js"></script>
+
+</body>
+</html>

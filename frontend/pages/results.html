@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Demand Results</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <h1>🌍 Demand Analysis Results</h1>
+
+  <!-- Search Box -->
+  <div class="search-box">
+    <input type="text" id="productInput" placeholder="Enter product name..." />
+    <button onclick="fetchDemand()">Search</button>
+  </div>
+
+  <!-- Chart -->
+  <div class="chart-container">
+    <canvas id="trendChart" height="200"></canvas>
+  </div>
+
+  <!-- Results Section -->
+  <div class="results-section">
+    <h2>📈 Trending Products</h2>
+    <ul id="trendResults"></ul>
+
+    <h2>📰 Top News</h2>
+    <div class="card-list" id="newsResults"></div>
+
+    <h2>🖼️ Images</h2>
+    <div class="image-grid" id="imageResults"></div>
+  </div>
+
+  <!-- AI Assistant -->
+  <button id="toggle-assistant">🤖 Assistant</button>
+  <div id="assistant" class="assistant-box">
+    <div class="chat-box" id="chat-box">
+      <div><b>Bot:</b> Hi! Ask me about any product demand. 😊</div>
+    </div>
+    <div class="input-area">
+      <input type="text" id="user-input" placeholder="Type here...">
+      <button onclick="sendToAssistant()">Send</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
+  <script src="../js/assistant.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

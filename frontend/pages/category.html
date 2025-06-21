@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Product</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <h1 style="text-align: center; margin-top: 2rem;">Choose a Product</h1>
+  <div class="dashboard" id="product-list">
+    <!-- Product cards will appear here -->
+  </div>
+
+  <script>
+    // 🔍 Step 1: Read category from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const category = urlParams.get('category');
+
+    // 🧠 Step 2: Define products by category
+    const productsByCategory = {
+      mobiles: ["iPhone 14", "Samsung Galaxy", "Redmi Note", "OnePlus Nord"],
+      groceries: ["Wheat", "Rice", "Sugar", "Pulses"],
+      vegetables: ["Tomato", "Potato", "Carrot", "Spinach"],
+      fruits: ["Apple", "Banana", "Mango", "Orange"],
+      electronics: ["TV", "Air Conditioner", "Washing Machine", "Microwave"],
+      fashion: ["T-Shirts", "Jeans", "Shoes", "Jackets"],
+      accessories: ["Necklace", "Earrings", "Watch", "Hair Clip"],
+      beauty: ["Lipstick", "Face Cream", "Perfume", "Kajal"]
+    };
+
+    // 🧱 Step 3: Render products
+    const productListDiv = document.getElementById("product-list");
+    const selectedProducts = productsByCategory[category] || [];
+
+    selectedProducts.forEach(product => {
+      const card = document.createElement("a");
+      card.className = "card";
+      card.textContent = product;
+      card.href = `results.html?product=${encodeURIComponent(product)}`;
+      productListDiv.appendChild(card);
+    });
+  </script>
+</body>
+</html>
