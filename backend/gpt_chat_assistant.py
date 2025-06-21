@@ -8,7 +8,7 @@ load_dotenv()
 
 router = APIRouter()
 
-HUGGINGFACE_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "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")
+HUGGINGFACE_API_KEY = os.getenv("")
 client = InferenceClient(token=HUGGINGFACE_API_KEY)
 
 # ✅ Use a tested chat-compatible model
